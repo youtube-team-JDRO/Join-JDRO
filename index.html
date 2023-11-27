@@ -29,7 +29,12 @@
                     <input type="text" value="" id="ytlink" required>
                     <span>youtube channel URL</span>
                 </div>
-                <input type="submit" value="submit" class="sub" id="submit">
+                <div class="button-container">
+                    <input type="submit" value="Submit" class="sub" id="submit">
+                    <a href="https://www.youtube.com/@ARKA_JDRO">
+                    <button class="su" type="button">Subscribe</button>
+                </a>
+                </div>
             </form>
         </div>
         <div class="text">
@@ -55,6 +60,11 @@ body
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.box .form form .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align buttons vertically in the middle */
 }
 .box
 {
@@ -120,6 +130,31 @@ body
 .box .form form .sub:active{
     transform: scale(0.96);
 }
+.box .form form .su
+{
+    padding: 10px 20px;
+    color: #1263cecc;
+    border: none;
+    outline: none;
+    background: #00000000;
+    border: 2px solid #65c1ff1a;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 50px;
+    transition:transform 0.2s ease;
+    
+    margin-left: 10px; 
+
+    
+    
+    
+}
+.box .form form .su:hover {
+    background-color: #65c1ff48;
+}
+.box .form form .su:active{
+    transform: scale(0.96);
+}
 h5{
     font-family: worksans-semibold,"work sans",sans-serif !important;
     font-size: calc((4.634 * var(--one-unit)) - (var(--scrollbar-width) * 0.046340000000000006)) !important;
@@ -172,7 +207,12 @@ picture{
     background: #2ffff5; 
   }
 
-
+.di{
+    padding-left: 100px;
+    display: inline-block;
+    margin-bottom: 100px;
+    
+}
 </style>
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
