@@ -8,7 +8,7 @@
     <link rel="icon" href="https://static.wixstatic.com/media/906d00_accddb2993154ccf90cfc4ef09e31654~mv2.png/v1/fill/w_64,h_64,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/906d00_accddb2993154ccf90cfc4ef09e31654~mv2.png" type="imagr/x-icon">
 </head>
 <body>
-    
+  <section>
     <div class="box">
         <div class="form">
             <h2>Join J.D.R.O</h2>
@@ -42,6 +42,7 @@
     </div>
         <p class="c"><span class="wixui-rich-text__text">© 2023 by<span style="text-decoration:underline;" class="wixui-rich-text__text"><a href="https://www.youtube.com/@ARKA_JDRO" target="_blank" rel="noreferrer noopener" class="wixui-rich-text__text">&nbsp;Arka&nbsp;J.D.R.O</a></span>.</span></p>
     </div>
+  </section>  
 </body>
 <style>
 *
@@ -61,6 +62,37 @@ body
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  perspective: 1000px;
+}
+section::before {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  transform: translate(-150px, -100px);
+  background: linear-gradient(90deg, #9c27b0, #f3f5f5);
+}
+section::after {
+  content: "";
+  position: absolute;
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  transform: translate(150px, 100px);
+  background: linear-gradient(90deg, #17aaa3, #f3f5f5);
+  z-index: -1;
+}
 .box .form form .button-container {
     display: flex;
     justify-content: space-between;
@@ -75,6 +107,7 @@ body
     border-radius: 20px;
     background: rgba(49, 49, 49, .2);
     border: 1px solid rgba(54, 255, 245, 0.87);
+    
 }
 .box .form
 {
@@ -130,6 +163,8 @@ body
 .box .form form .sub:active{
     transform: scale(0.96);
 }
+
+
 .box .form form .su
 {
     padding: 10px 20px;
@@ -142,13 +177,8 @@ body
     font-size: 16px;
     border-radius: 50px;
     transition:transform 0.2s ease;
-    
     margin-left: 10px; 
-
-    
-    
-    
-}
+  }
 .box .form form .su:hover {
     background-color: #65c1ff48;
 }
@@ -212,6 +242,12 @@ picture{
     display: inline-block;
     margin-bottom: 100px;
     
+}
+@media (max-width: 768px) {
+  section::before,
+  section::after {
+    display: none; /* Hide the pseudo-elements on smaller screens */
+  }
 }
 </style>
 <script type="module">
